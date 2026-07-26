@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>M3M Real Estates — Find • Invest • Grow</title>
+<meta name="description" content="M3M Real Estates — luxury residential & commercial projects across Delhi NCR. Explore M3M Trump Tower (Noida) and M3M Jewelcrest Avenue." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+--green:#57b82a;--green-light:#86e34f;--green-deep:#3d9418;
+--blue:#1f74e0;--blue-light:#4f9bff;--blue-deep:#155bb5;--navy:#0a1a2f;
+--gold:#2f86e0;--gold-light:#86e34f;--gold-deep:#155bb5;
+--black:#0a1a2f;--charcoal:#0e2036;--charcoal-2:#13263f;
+--grey:#7f93ac;--grey-light:#c8d5e5;--white:#fff;
+--shadow:0 20px 60px rgba(0,0,0,.42);
+--gold-grad:linear-gradient(120deg,#3d9418 0%,#57b82a 42%,#1f74e0 100%);
+--brand-grad:linear-gradient(120deg,#57b82a 0%,#1f74e0 100%);
+--radius:14px;--ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--black);color:var(--grey-light);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--white);line-height:1.2;font-weight:600}
+a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
+.container{width:min(1200px,92%);margin-inline:auto}
+.section{padding:100px 0;position:relative}
+.text-gold{color:var(--green-light)}
+.gold-line{width:70px;height:3px;background:var(--brand-grad);border-radius:3px;margin:18px 0 26px}
+.center{text-align:center}.center .gold-line{margin-inline:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:.72rem;color:var(--green-light);font-weight:600;margin-bottom:10px;display:inline-block}
+.section-title{font-size:clamp(1.9rem,4vw,3rem)}
+.lead{color:var(--grey-light);font-size:1.05rem;max-width:720px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:50px;font-weight:600;font-size:.9rem;letter-spacing:.5px;cursor:pointer;border:none;transition:transform .35s var(--ease),box-shadow .35s var(--ease);position:relative;overflow:hidden}
+.btn-gold{background:var(--brand-grad);color:#fff}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(31,116,224,.45)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(79,155,255,.6)}
+.btn-ghost:hover{background:var(--blue);color:#fff;transform:translateY(-3px);border-color:var(--blue)}
+.logo-img{height:42px;width:auto;display:block}
+.footer .logo-img{height:52px}
+@media(max-width:560px){.logo-img{height:34px}}
+.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 0;transition:all .4s var(--ease)}
+.nav.scrolled{background:rgba(8,20,36,.94);backdrop-filter:blur(14px);padding:14px 0;box-shadow:0 8px 30px rgba(0,0,0,.4)}
+.nav .container{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:baseline;gap:3px;font-family:'Playfair Display',serif;cursor:pointer}
+.logo .m{font-size:1.9rem;font-weight:700;color:var(--green);letter-spacing:1px}
+.logo .m:last-of-type{color:var(--blue-light)}
+.logo .three{font-size:1.9rem;font-weight:700;color:var(--blue-light)}
+.logo small{color:var(--grey);letter-spacing:3px;font-size:.6rem;margin-left:6px;text-transform:uppercase;font-family:'Poppins'}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
+.nav-links a{font-size:.86rem;font-weight:500;letter-spacing:.5px;color:var(--grey-light);position:relative;padding:4px 0;transition:color .3s;cursor:pointer}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--brand-grad);transition:width .35s var(--ease)}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{padding:10px 22px!important;color:#fff}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.hamburger span{width:26px;height:2px;background:#fff;transition:.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.page{display:none}.page.active{display:block;animation:fadein .5s var(--ease)}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:90px}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 18% 22%,rgba(87,184,42,.22),transparent 42%),radial-gradient(circle at 82% 68%,rgba(31,116,224,.24),transparent 46%),linear-gradient(160deg,#0a1a2f 0%,#0d223c 55%,#0a1a2f 100%)}
+.hero-bg::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(79,155,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(79,155,255,.06) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(circle at center,#000,transparent 75%)}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:-1;animation:float 9s ease-in-out infinite}
+.hero-orb.o1{width:340px;height:340px;top:-60px;right:8%;background:radial-gradient(circle,var(--blue),transparent 70%)}
+.hero-orb.o2{width:240px;height:240px;bottom:5%;left:-40px;animation-delay:-3s;opacity:.45;background:radial-gradient(circle,var(--green),transparent 70%)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-28px)}}
+.hero-content{max-width:760px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.6rem);margin-bottom:22px}
+.hero h1 .shine{background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:1.15rem;margin-bottom:34px;max-width:620px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.tagline{margin-top:26px;color:var(--grey);letter-spacing:3px;font-size:.8rem;text-transform:uppercase}
+.tagline b{color:var(--green-light)}.tagline i{color:var(--blue-light);font-style:normal}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.show{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}.reveal.d4{transition-delay:.4s}
+.stats{background:var(--charcoal);border-top:1px solid rgba(79,155,255,.18);border-bottom:1px solid rgba(79,155,255,.18)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.stat{text-align:center;padding:20px}
+.stat .num{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);background:var(--brand-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
+.stat .label{text-transform:uppercase;letter-spacing:2px;font-size:.74rem;color:var(--grey);margin-top:6px}
+.grid{display:grid;gap:28px}.grid.cols-2{grid-template-columns:repeat(2,1fr)}.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.project-card{background:var(--charcoal-2);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.06);transition:transform .5s var(--ease),box-shadow .5s var(--ease);position:relative}
+.project-card:hover{transform:translateY(-10px);box-shadow:var(--shadow);border-color:rgba(79,155,255,.35)}
+.project-card:hover .ph-img{transform:scale(1.06)}
+.ph-img{height:230px;position:relative;overflow:hidden;transition:transform .6s var(--ease);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:.8rem;letter-spacing:2px;text-transform:uppercase}
+.ph-a{background:linear-gradient(135deg,#123a1a,#2a6b1e,#0e2036)}
+.ph-b{background:linear-gradient(135deg,#0f2a4a,#1f5fae,#0e2036)}
+.ph-c{background:linear-gradient(135deg,#10233c,#1b4c86,#0a1a2f)}
+.ph-d{background:linear-gradient(135deg,#123a2a,#1f74e0,#0e2036)}
+.ph-badge{position:absolute;top:14px;left:14px;background:var(--brand-grad);color:#fff;font-size:.68rem;font-weight:700;padding:5px 12px;border-radius:30px;letter-spacing:1px}
+.project-card .body{padding:24px}
+.project-card h3{font-size:1.4rem;margin-bottom:6px}
+.project-card .meta{color:var(--blue-light);font-size:.8rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+.project-card p{font-size:.92rem;color:var(--grey);margin-bottom:18px}
+.card-link{color:var(--green-light);font-weight:600;font-size:.85rem;display:inline-flex;align-items:center;gap:6px;transition:gap .3s;cursor:pointer}
+.project-card:hover .card-link{gap:12px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.split .visual{height:440px;border-radius:var(--radius);position:relative;overflow:hidden;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center}
+.visual-frame{position:absolute;inset:18px;border:1px solid rgba(79,155,255,.55);border-radius:8px;z-index:2;pointer-events:none}
+.feature-list{list-style:none;margin-top:18px}
+.feature-list li{padding:10px 0 10px 34px;position:relative;border-bottom:1px solid rgba(255,255,255,.07)}
+.feature-list li::before{content:'\2726';position:absolute;left:0;color:var(--green)}
+.amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.amen{background:var(--charcoal-2);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:28px 20px;text-align:center;transition:.4s var(--ease)}
+.amen:hover{border-color:rgba(87,184,42,.55);transform:translateY(-6px);background:var(--charcoal)}
+.amen .ico{font-size:1.8rem;margin-bottom:12px}
+.amen h4{font-size:1rem;font-family:'Poppins';color:#fff;margin-bottom:4px}
+.amen p{font-size:.82rem;color:var(--grey)}
+.specs{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px}
+.spec-row{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);gap:16px}
+.spec-row span:first-child{color:var(--grey)}.spec-row span:last-child{color:#fff;font-weight:600;text-align:right}
+.timeline{position:relative;margin-top:40px}
+.timeline::before{content:'';position:absolute;left:120px;top:0;bottom:0;width:2px;background:linear-gradient(var(--green),var(--blue))}
+.tl-item{display:grid;grid-template-columns:120px 1fr;gap:34px;margin-bottom:34px;position:relative}
+.tl-year{text-align:right;color:var(--blue-light);font-family:'Playfair Display';font-size:1.3rem;font-weight:700}
+.tl-body{position:relative;padding-left:14px}
+.tl-body::before{content:'';position:absolute;left:-24px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(87,184,42,.22)}
+.tl-body h4{font-family:'Poppins';font-size:1.05rem;margin-bottom:4px}.tl-body p{font-size:.9rem;color:var(--grey)}
+.leader-card{background:var(--charcoal-2);border-radius:var(--radius);padding:30px;text-align:center;border:1px solid rgba(255,255,255,.06);transition:.4s var(--ease)}
+.leader-card:hover{transform:translateY(-8px);border-color:rgba(79,155,255,.45)}
+.leader-avatar{width:96px;height:96px;border-radius:50%;margin:0 auto 18px;background:var(--brand-grad);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display';font-size:2rem;color:#fff;font-weight:700}
+.leader-card h4{font-family:'Poppins';font-size:1.1rem}
+.leader-card .role{color:var(--green-light);font-size:.8rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.leader-card p{font-size:.86rem;color:var(--grey)}
+.cta-band{background:var(--brand-grad);color:#fff;border-radius:20px;padding:60px;text-align:center;position:relative;overflow:hidden}
+.cta-band h2{color:#fff;font-size:clamp(1.8rem,4vw,2.8rem)}
+.cta-band p{color:rgba(255,255,255,.9);max-width:620px;margin:12px auto 26px}
+.cta-band .btn-ghost{border-color:#fff;color:#fff}.cta-band .btn-ghost:hover{background:#fff;color:var(--blue)}
+.page-hero{padding:180px 0 90px;position:relative;overflow:hidden}
+.page-hero.has-banner{padding-top:200px}
+.hero-banner{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,16,30,.92) 0%,rgba(6,16,30,.72) 45%,rgba(6,16,30,.35) 100%),linear-gradient(0deg,rgba(6,16,30,.85),rgba(6,16,30,.15))}
+.page-hero h1{font-size:clamp(2.2rem,5vw,3.8rem)}
+.breadcrumb{color:var(--grey);font-size:.82rem;margin-top:14px}.breadcrumb span{cursor:pointer}.breadcrumb span:hover{color:var(--green-light)}
+.form-card{background:var(--charcoal-2);border:1px solid rgba(79,155,255,.22);border-radius:var(--radius);padding:40px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;color:var(--grey);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;padding:14px 16px;background:var(--black);border:1px solid rgba(255,255,255,.12);border-radius:8px;color:#fff;font-family:inherit;font-size:.95rem;transition:.3s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,116,224,.18)}
+.field textarea{resize:vertical;min-height:110px}
+.form-note{font-size:.78rem;color:var(--grey);margin-top:14px;text-align:center}
+.contact-info{display:flex;flex-direction:column;gap:26px}
+.ci-item{display:flex;gap:18px;align-items:flex-start}
+.ci-ico{flex:0 0 48px;height:48px;border-radius:12px;background:rgba(31,116,224,.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.ci-item h4{font-family:'Poppins';font-size:1rem;margin-bottom:2px}
+.ci-item a,.ci-item p{color:var(--grey-light);font-size:.92rem}.ci-item a:hover{color:var(--green-light)}
+.map-frame{border:0;width:100%;height:420px;border-radius:var(--radius);filter:grayscale(.15) contrast(1.05);display:block}
+.map-wrap{position:relative;border:1px solid rgba(79,155,255,.22);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.modal-overlay{position:fixed;inset:0;background:rgba(4,12,24,.82);backdrop-filter:blur(6px);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.modal-overlay.open{opacity:1;visibility:visible}
+.modal{background:linear-gradient(160deg,#12294a,#0c1c33);border:1px solid rgba(79,155,255,.4);border-radius:18px;width:min(480px,100%);padding:40px;position:relative;transform:translateY(30px) scale(.96);transition:transform .5s var(--ease);box-shadow:var(--shadow);max-height:92vh;overflow-y:auto}
+.modal-overlay.open .modal{transform:none}
+.modal-close{position:absolute;top:16px;right:18px;background:none;border:none;color:var(--grey);font-size:1.6rem;cursor:pointer;transition:.3s;line-height:1}
+.modal-close:hover{color:var(--green-light);transform:rotate(90deg)}
+.modal h3{font-size:1.6rem;margin-bottom:6px}.modal p.sub{font-size:.88rem;color:var(--grey);margin-bottom:22px}
+.float-enquire{position:fixed;right:24px;bottom:24px;z-index:900;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.fab{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;cursor:pointer;border:none;box-shadow:0 8px 24px rgba(0,0,0,.4);transition:transform .3s var(--ease);color:#fff;text-decoration:none}
+.fab:hover{transform:scale(1.1)}.fab-wa{background:#25d366}
+.fab-enquire{background:var(--brand-grad);color:#fff;font-size:.7rem;font-weight:700;width:auto;height:auto;padding:14px 20px;border-radius:50px;letter-spacing:1px;text-transform:uppercase}
+.fab-pulse{position:relative}
+.fab-pulse::before{content:'';position:absolute;inset:0;border-radius:50%;background:inherit;animation:pulse 2s infinite;z-index:-1}
+@keyframes pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.8);opacity:0}}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--charcoal-2);border:1px solid var(--blue);color:#fff;padding:14px 26px;border-radius:50px;z-index:3000;transition:transform .5s var(--ease);font-size:.9rem}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.g-item{position:relative;border-radius:var(--radius);overflow:hidden;cursor:pointer;min-height:200px;display:flex;align-items:flex-end;border:1px solid rgba(255,255,255,.06);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.g-item.g-tall{grid-row:span 2;min-height:418px}
+.g-item:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(87,184,42,.5)}
+.g-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.g-item .g-fallback{position:absolute;inset:0;z-index:0}
+.g-item .g-cap{position:relative;z-index:2;width:100%;padding:16px;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(4,12,24,.78))}
+.gallery-grid.gallery-2{grid-template-columns:repeat(2,1fr)}@media(max-width:560px){.gallery-grid.gallery-2{grid-template-columns:1fr}}
+.lightbox{position:fixed;inset:0;background:rgba(4,10,20,.94);z-index:2500;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.lightbox.open{opacity:1;visibility:visible}
+.lb-stage{max-width:90vw;max-height:84vh;position:relative;text-align:center}
+.lb-stage img{max-width:90vw;max-height:78vh;border-radius:10px;box-shadow:var(--shadow)}
+.lb-fallback{width:min(80vw,900px);height:min(60vh,520px);border-radius:10px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase;font-size:.9rem}
+.lb-cap{color:var(--grey-light);margin-top:14px;font-size:.85rem;letter-spacing:1px}
+.lb-btn{position:fixed;top:50%;transform:translateY(-50%);background:rgba(31,116,224,.18);border:1px solid rgba(79,155,255,.45);color:#fff;width:52px;height:52px;border-radius:50%;font-size:1.5rem;cursor:pointer;transition:.3s;z-index:2600}
+.lb-btn:hover{background:var(--blue)}.lb-prev{left:24px}.lb-next{right:24px}
+.lb-close{position:fixed;top:22px;right:26px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;z-index:2600;line-height:1}
+.social{display:flex;gap:12px;margin-top:16px}.social a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;color:var(--grey-light);transition:.3s var(--ease)}.social a:hover{background:var(--brand-grad);color:#fff;transform:translateY(-3px)}.social svg{width:19px;height:19px;fill:currentColor}
+.footer{background:#071426;padding:70px 0 30px;border-top:1px solid rgba(79,155,255,.18)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:40px}
+.footer h4{font-family:'Poppins';font-size:.95rem;color:#fff;margin-bottom:18px;letter-spacing:1px}
+.footer ul{list-style:none}.footer ul li{margin-bottom:10px}
+.footer ul a{color:var(--grey);font-size:.88rem;transition:.3s;cursor:pointer}.footer ul a:hover{color:var(--green-light);padding-left:4px}
+.footer p.about{color:var(--grey);font-size:.88rem;margin-top:16px}
+.footer-bottom{margin-top:50px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--grey);font-size:.8rem}
+.disclaimer{background:#050f1e;padding:16px 0;text-align:center}.disclaimer p{font-size:.72rem;color:#5a6c82;max-width:960px;margin:0 auto}
+@media(max-width:940px){.stats-grid{grid-template-columns:repeat(2,1fr)}.grid.cols-2,.grid.cols-3{grid-template-columns:1fr}.amen-grid{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr;gap:34px}.split .visual{height:320px}.footer-grid{grid-template-columns:1fr 1fr}.specs{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr}.g-item.g-tall{grid-row:auto;min-height:200px}.nav-links{position:fixed;top:0;right:-100%;width:74%;max-width:320px;height:100vh;background:rgba(8,20,36,.98);backdrop-filter:blur(14px);flex-direction:column;justify-content:center;gap:30px;transition:right .45s var(--ease);padding:40px}.nav-links.open{right:0}.hamburger{display:flex;z-index:1100}}
+@media(max-width:560px){.section{padding:70px 0}.amen-grid,.stats-grid,.gallery-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.timeline::before{left:60px}.tl-item{grid-template-columns:60px 1fr;gap:20px}.cta-band{padding:40px 24px}.modal{padding:30px 24px}}
+</style>
+  <link rel="icon" href="asset/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="asset/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="asset/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="asset/favicon-180.png" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <div class="logo" data-nav="home"><img class="logo-img" src="asset/logo.png" alt="m3mrealestates.com — Find, Invest, Grow" /></div>
+    <ul class="nav-links">
+      <li><a data-nav="home" class="active">Home</a></li>
+      <li><a data-nav="about">About</a></li>
+      <li><a data-nav="trump">M3M Trump Tower</a></li>
+      <li><a data-nav="jewel">M3M Jacob &amp; Co</a></li>
+      <li><a data-nav="contact">Contact</a></li>
+      <li><a data-nav="contact" class="btn btn-gold nav-cta">Enquire Now</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ================= HOME ================= -->
+<div class="page active" id="page-home">
+  <header class="hero">
+    <div class="hero-bg"></div><div class="hero-orb o1"></div><div class="hero-orb o2"></div>
+    <div class="container hero-content">
+      <span class="eyebrow reveal">Luxury Real Estate • Delhi NCR</span>
+      <h1 class="reveal d1">Where Ambition Meets <span class="shine">Architecture</span></h1>
+      <p class="reveal d2">M3M crafts landmark residences and commercial destinations that blend world-class design, prime locations and an uncompromising standard of living. Discover addresses that define prestige.</p>
+      <div class="hero-actions reveal d3">
+        <a class="btn btn-gold" data-nav="trump">Explore Projects</a>
+        <a class="btn btn-ghost" data-nav="contact">Book a Site Visit</a>
+      </div>
+      <div class="tagline reveal d4"><b>Find</b> • <i>Invest</i> • <b>Grow</b></div>
+    </div>
+  </header>
+  <section class="stats" style="padding:60px 0;"><div class="container"><div class="stats-grid">
+    <div class="stat reveal"><div class="num"><span data-count="65">0</span>+</div><div class="label">Iconic Projects</div></div>
+    <div class="stat reveal d1"><div class="num"><span data-count="3000">0</span>+</div><div class="label">Acre Land Bank</div></div>
+    <div class="stat reveal d2"><div class="num"><span data-count="15">0</span>+</div><div class="label">Years of Excellence</div></div>
+    <div class="stat reveal d3"><div class="num"><span data-count="4">0</span></div><div class="label">Cities Across India</div></div>
+  </div></div></section>
+  <section class="section"><div class="container split">
+    <div class="reveal">
+      <span class="eyebrow">The M3M Vision</span>
+      <h2 class="section-title">Building Landmarks,<br>Not Just Buildings</h2>
+      <div class="gold-line"></div>
+      <p class="lead">Founded in 2010, M3M has grown into one of North India's most recognised luxury developers, delivering landmark residential, commercial and retail destinations across Delhi NCR.</p>
+      <ul class="feature-list">
+        <li>Ultra-premium residences on the region's most prized corridors</li>
+        <li>Global architectural collaborations &amp; branded developments</li>
+        <li>Integrated retail, commercial &amp; hospitality destinations</li>
+        <li>A delivery-first reputation across Delhi NCR</li>
+      </ul>
+      <a class="btn btn-gold" style="margin-top:26px;" data-nav="about">Our Story</a>
+    </div>
+    <div class="visual reveal d2 ph-a"><img src="asset/residential-amenities.jpg" alt="M3M community" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;" onerror="this.style.display='none'" /><div class="visual-frame"></div><span style="z-index:2;color:rgba(255,255,255,.55);letter-spacing:2px;text-transform:uppercase;font-size:.8rem;align-self:flex-end;margin:0 auto 14px;">Landmark Architecture</span></div>
+  </div></section>
+  <section class="section" style="background:var(--charcoal);"><div class="container">
+    <div class="center reveal" style="margin-bottom:50px;"><span class="eyebrow">Signature Developments</span><h2 class="section-title">Featured Projects</h2><div class="gold-line"></div></div>
+    <div class="grid cols-2">
+      <article class="project-card reveal" data-nav="trump">
+        <div class="ph-img ph-c"><img src="asset/trump-front.jpg" alt="M3M Trump Tower, Noida" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" onerror="this.style.display='none'" /><span class="ph-badge" style="z-index:2;">Ultra-Luxury Residences</span><span style="position:relative;z-index:2;">Trump Tower</span></div>
+        <div class="body"><div class="meta">Sector 94, Noida</div><h3>M3M Trump Tower</h3><p>Iconic Trump-branded residences — a limited collection of ultra-luxury 4 &amp; 5 BHK homes in a striking twin-tower landmark.</p><span class="card-link">View Project →</span></div>
+      </article>
+      <article class="project-card reveal d2" data-nav="jewel">
+        <div class="ph-img ph-b"><img src="asset/jewelcrest-front.webp" alt="M3M Jewelcrest Avenue" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;" onerror="this.style.display='none'" /><span class="ph-badge" style="z-index:2;">Retail &amp; Commercial</span><span style="position:relative;z-index:2;">Jewelcrest Avenue</span></div>
+        <div class="body"><div class="meta">Prime NCR Corridor</div><h3>M3M Jewelcrest Avenue</h3><p>A futuristic retail and commercial destination — high-street shops, boutique offices, fine dining and entertainment.</p><span class="card-link">View Project →</span></div>
+      </article>
+    </div>
+  </div></section>
+  <section class="section"><div class="container">
+    <div class="center reveal" style="margin-bottom:50px;"><span class="eyebrow">The M3M Advantage</span><h2 class="section-title">Why Buyers &amp; Investors Choose M3M</h2><div class="gold-line"></div></div>
+    <div class="amen-grid">
+      <div class="amen reveal"><div class="ico">🏆</div><h4>Award-Winning Design</h4><p>Globally recognised architecture &amp; masterplanning.</p></div>
+      <div class="amen reveal d1"><div class="ico">📍</div><h4>Prime Locations</h4><p>Addresses on the most sought-after NCR corridors.</p></div>
+      <div class="amen reveal d2"><div class="ico">⏱️</div><h4>Timely Delivery</h4><p>A track record of handing over on commitment.</p></div>
+      <div class="amen reveal d3"><div class="ico">💎</div><h4>Lasting Value</h4><p>Assets built to appreciate and to last.</p></div>
+    </div>
+  </div></section>
+  <section class="section" style="padding-top:0;"><div class="container reveal"><div class="cta-band">
+    <h2>Your Landmark Address Awaits</h2><p>Speak with our relationship team, request a brochure, or schedule a private site visit at your convenience.</p>
+    <div class="hero-actions" style="justify-content:center;"><a class="btn" style="background:#06223f;color:#fff;" data-nav="contact">Book a Site Visit</a><a class="btn btn-ghost fab-wa">Chat on WhatsApp</a></div>
+  </div></div></section>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="page" id="page-about">
+  <header class="page-hero"><div class="hero-bg"></div><div class="hero-orb o1"></div>
+    <div class="container"><span class="eyebrow reveal">About the Group</span><h1 class="reveal d1">Everything About <span class="text-gold">M3M</span></h1><p class="lead reveal d2" style="margin-top:16px;">From a bold beginning to one of North India's most recognised luxury developers.</p><div class="breadcrumb reveal d3"><span data-nav="home">Home</span> / About</div></div>
+  </header>
+  <section class="section" style="padding-top:40px;"><div class="container split">
+    <div class="reveal"><span class="eyebrow">Our Story</span><h2 class="section-title">Where It All Began</h2><div class="gold-line"></div>
+      <p class="lead">M3M India was <strong class="text-gold">established in 2010</strong>, with an ambition to elevate urban living in the National Capital Region. The name stands for <strong class="text-gold">"Magnificence in the Trinity of Men, Materials &amp; Money"</strong>.</p>
+      <p style="margin-top:16px;">In a short span, M3M grew into a leading name in luxury real estate across Gurugram, Noida and the wider Delhi NCR — spanning ultra-luxury residences, retail high-streets, commercial space and branded developments.</p>
+    </div>
+    <div class="visual reveal d2 ph-a"><img src="asset/trump-towers-hero.webp" alt="M3M development" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;" onerror="this.style.display='none'" /><div class="visual-frame"></div><span style="z-index:2;color:rgba(255,255,255,.55);letter-spacing:2px;text-transform:uppercase;font-size:.8rem;align-self:flex-end;margin:0 auto 14px;">Est. 2010 • Delhi NCR</span></div>
+  </div></section>
+  <section class="stats" style="padding:56px 0;"><div class="container"><div class="stats-grid">
+    <div class="stat reveal"><div class="num"><span data-count="2010">0</span></div><div class="label">Founded</div></div>
+    <div class="stat reveal d1"><div class="num"><span data-count="65">0</span>+</div><div class="label">Iconic Projects</div></div>
+    <div class="stat reveal d2"><div class="num"><span data-count="3000">0</span>+</div><div class="label">Acre Land Bank</div></div>
+    <div class="stat reveal d3"><div class="num"><span data-count="4">0</span></div><div class="label">Cities</div></div>
+  </div></div></section>
+  <section class="section"><div class="container">
+    <div class="center reveal" style="margin-bottom:50px;"><span class="eyebrow">Leadership</span><h2 class="section-title">The People Behind M3M</h2><div class="gold-line"></div><p class="lead center" style="margin-inline:auto;">M3M was founded and is promoted by the Bansal family, whose vision shaped the group's luxury-first identity.</p></div>
+    <div class="grid cols-3">
+      <div class="leader-card reveal"><div class="leader-avatar">BB</div><h4>Basant Bansal</h4><div class="role">Founder &amp; Chairman</div><p>The founding force behind M3M and its commitment to magnificence.</p></div>
+      <div class="leader-card reveal d1"><div class="leader-avatar">PB</div><h4>Pankaj Bansal</h4><div class="role">Director &amp; Promoter</div><p>A key promoter driving M3M's growth and global collaborations.</p></div>
+      <div class="leader-card reveal d2"><div class="leader-avatar">RB</div><h4>Roop Bansal</h4><div class="role">Promoter</div><p>Instrumental in expanding the group's portfolio &amp; delivery standards.</p></div>
+    </div>
+    <p class="center" style="font-size:.8rem;color:var(--grey);margin-top:24px;">Leadership names/roles are indicative — verify current designations before publishing.</p>
+  </div></section>
+  <section class="section" style="background:var(--charcoal);"><div class="container">
+    <div class="center reveal" style="margin-bottom:20px;"><span class="eyebrow">The Journey</span><h2 class="section-title">A Legacy in the Making</h2><div class="gold-line"></div></div>
+    <div class="timeline">
+      <div class="tl-item reveal"><div class="tl-year">2010</div><div class="tl-body"><h4>Foundation</h4><p>M3M is established, entering the NCR market with a luxury-first vision.</p></div></div>
+      <div class="tl-item reveal d1"><div class="tl-year">2012–16</div><div class="tl-body"><h4>Gurugram Rise</h4><p>Landmark residential &amp; commercial launches along premium corridors.</p></div></div>
+      <div class="tl-item reveal d2"><div class="tl-year">2017–20</div><div class="tl-body"><h4>Scaling Delivery</h4><p>Portfolio expands with a growing record of completed projects.</p></div></div>
+      <div class="tl-item reveal d3"><div class="tl-year">2021–Now</div><div class="tl-body"><h4>Branded &amp; Beyond</h4><p>Iconic branded developments and expansion into new markets.</p></div></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ================= TRUMP ================= -->
+<div class="page" id="page-trump">
+  <header class="page-hero has-banner"><div class="hero-bg"></div>
+    <div class="hero-banner" style="background-image:url('asset/trump-front.jpg');"></div>
+    <div class="hero-orb o1"></div><div class="hero-orb o2"></div>
+    <div class="container"><span class="eyebrow reveal">Trump-Branded Residences • Sector 94, Noida</span><h1 class="reveal d1">M3M <span class="text-gold">Trump Tower</span></h1>
+      <p class="lead reveal d2" style="margin-top:16px;">Globally branded luxury living arrives in Noida. An exclusive twin-tower landmark of 4 &amp; 5 BHK residences in Sector 94 — iconic architecture, refined interiors and world-class amenities.</p>
+      <div class="hero-actions reveal d3" style="margin-top:24px;"><a class="btn btn-gold" data-open-modal>Enquire Now</a><a class="btn btn-ghost" data-nav="contact">Book a Site Visit</a></div>
+      <div class="breadcrumb reveal d4"><span data-nav="home">Home</span> / M3M Trump Tower</div>
+    </div>
+  </header>
+  <section class="section" style="padding-top:40px;"><div class="container split">
+    <div class="reveal"><span class="eyebrow">Project Overview</span><h2 class="section-title">Exclusivity Has a New Address</h2><div class="gold-line"></div>
+      <p class="lead">M3M Trump Tower brings the globally recognised Trump residential brand to <strong class="text-gold">Sector 94, Noida</strong> — a striking twin-tower development offering a limited collection of ultra-luxury <strong class="text-gold">4 &amp; 5 BHK branded residences</strong>.</p>
+      <p style="margin-top:16px;">With timeless architecture commanding the Noida skyline, hospitality-inspired services and premium interiors, it sets a new benchmark for branded luxury living.</p>
+      <ul class="feature-list"><li>Iconic Trump-branded residences</li><li>Striking twin-tower architecture</li><li>Spacious 4 &amp; 5 BHK homes with premium finishes</li><li>Invitation-only private viewing experience</li></ul>
+    </div>
+    <div class="visual reveal d2 ph-c"><img src="asset/trump-grand-living.webp" alt="M3M Trump Tower interior" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;" onerror="this.style.display='none'" /><div class="visual-frame"></div><span style="z-index:2;color:rgba(255,255,255,.55);letter-spacing:2px;text-transform:uppercase;font-size:.8rem;align-self:flex-end;margin:0 auto 14px;">Artistic Impression</span></div>
+  </div></section>
+  <section class="stats" style="padding:56px 0;"><div class="container"><div class="stats-grid">
+    <div class="stat reveal"><div class="num"><span data-count="2">0</span></div><div class="label">Iconic Twin Towers</div></div>
+    <div class="stat reveal d1"><div class="num">4 &amp; 5</div><div class="label">BHK Branded Homes</div></div>
+    <div class="stat reveal d2"><div class="num">₹<span data-count="17" data-suffix=" Cr*">0</span></div><div class="label">Starting Price*</div></div>
+    <div class="stat reveal d3"><div class="num">Sec <span data-count="94">0</span></div><div class="label">Prime Noida Address</div></div>
+  </div></div></section>
+  <section class="section"><div class="container">
+    <div class="center reveal" style="margin-bottom:40px;"><span class="eyebrow">The Details</span><h2 class="section-title">Project at a Glance</h2><div class="gold-line"></div></div>
+    <div class="form-card reveal"><div class="specs">
+      <div class="spec-row"><span>Project Name</span><span>M3M Trump Tower (Trump Towers Noida)</span></div>
+      <div class="spec-row"><span>Developer</span><span>M3M Group</span></div>
+      <div class="spec-row"><span>Location</span><span>Sector 94, Noida</span></div>
+      <div class="spec-row"><span>Configuration</span><span>4 &amp; 5 BHK Branded Residences</span></div>
+      <div class="spec-row"><span>Development</span><span>Twin-Tower Landmark</span></div>
+      <div class="spec-row"><span>4 BHK Price*</span><span>₹17 Cr* onwards</span></div>
+      <div class="spec-row"><span>5 BHK Price*</span><span>On request</span></div>
+      <div class="spec-row"><span>Carpet Area</span><span>On request</span></div>
+    </div><p class="form-note">*Pricing/details indicative, from public marketing material, subject to change. Verify with the developer / RERA.</p></div>
+  </div></section>
+  <section class="section" style="background:var(--charcoal);"><div class="container">
+    <div class="center reveal" style="margin-bottom:50px;"><span class="eyebrow">Lifestyle</span><h2 class="section-title">Curated for Elevated Living</h2><div class="gold-line"></div></div>
+    <div class="amen-grid">
+      <div class="amen reveal"><div class="ico">✨</div><h4>Luxury Lifestyle Spaces</h4><p>Crafted to complement refined urban living.</p></div>
+      <div class="amen reveal d1"><div class="ico">🧘</div><h4>Wellness Experiences</h4><p>Spaces designed for relaxation &amp; balance.</p></div>
+      <div class="amen reveal d2"><div class="ico">🎯</div><h4>Recreation</h4><p>Leisure, entertainment &amp; social zones.</p></div>
+      <div class="amen reveal d3"><div class="ico">🏋️</div><h4>Fitness &amp; Active Living</h4><p>Modern facilities for a healthy lifestyle.</p></div>
+      <div class="amen reveal"><div class="ico">👑</div><h4>Resident Privileges</h4><p>Premium perks for an elite community.</p></div>
+      <div class="amen reveal d1"><div class="ico">🤝</div><h4>Refined Social Spaces</h4><p>Curated for connection &amp; moments.</p></div>
+      <div class="amen reveal d2"><div class="ico">🛎️</div><h4>Hospitality Services</h4><p>Global-standard, hospitality-inspired living.</p></div>
+      <div class="amen reveal d3"><div class="ico">🔒</div><h4>Privacy &amp; Security</h4><p>Exclusive, secure &amp; low-density living.</p></div>
+    </div>
+  </div></section>
+  <section class="section"><div class="container">
+    <div class="center reveal" style="margin-bottom:40px;"><span class="eyebrow">Location Advantage</span><h2 class="section-title">Unmatched Urban Connectivity</h2><div class="gold-line"></div></div>
+    <div class="split" style="align-items:stretch;">
+      <div class="reveal"><ul class="feature-list" style="margin-top:0;">
+        <li>Direct access to the Noida–Greater Noida Expressway</li>
+        <li>Close to Okhla Bird Sanctuary Metro Station</li>
+        <li>Quick access to South Delhi via the DND Flyway</li>
+        <li>Near Amity University</li>
+        <li>Minutes from Max Super Speciality Hospital</li>
+        <li>Easy reach of Noida Sector 18 &amp; DLF Mall of India</li>
+      </ul><a class="btn btn-gold" style="margin-top:24px;" data-open-modal>Get Directions on WhatsApp</a></div>
+      <div class="map-wrap reveal d2"><iframe class="map-frame" style="height:100%;min-height:340px;" src="https://www.google.com/maps?q=Trump+Towers+Noida+Sector+94&output=embed" loading="lazy" title="M3M Trump Tower location"></iframe></div>
+    </div>
+  </div></section>
+  <section class="section" style="background:var(--charcoal);"><div class="container">
+    <div class="center reveal" style="margin-bottom:44px;"><span class="eyebrow">Gallery</span><h2 class="section-title">A Glimpse of the Icon</h2><div class="gold-line"></div></div>
+        <div class="gallery-grid reveal"><div class="g-item g-tall"><img src="asset/trump-banner.webp" alt="Twin Tower Elevation" onerror="this.remove()" /><span class="g-fallback ph-c"></span><span class="g-cap">Twin Tower Elevation</span></div><div class="g-item"><img src="asset/trump-living-panoramic.jpg" alt="Living Room" onerror="this.remove()" /><span class="g-fallback ph-a"></span><span class="g-cap">Living Room</span></div><div class="g-item"><img src="asset/trump-living-sunset.jpg" alt="Balcony View" onerror="this.remove()" /><span class="g-fallback ph-d"></span><span class="g-cap">Balcony View</span></div><div class="g-item"><img src="asset/trump-grand-living.webp" alt="Master Suite" onerror="this.remove()" /><span class="g-fallback ph-b"></span><span class="g-cap">Master Suite</span></div><div class="g-item g-tall"><img src="asset/residential-amenities.jpg" alt="Wellness Zone" onerror="this.remove()" /><span class="g-fallback ph-a"></span><span class="g-cap">Wellness Zone</span></div><div class="g-item"><img src="asset/trump-lobby.webp" alt="Grand Lobby" onerror="this.remove()" /><span class="g-fallback ph-c"></span><span class="g-cap">Grand Lobby</span></div></div>
+  </div></section>
+  <section class="stats" style="padding:56px 0;"><div class="container"><div class="stats-grid">
+    <div class="stat reveal"><div class="num"><span data-count="4">0</span>-Screen</div><div class="label">Multiplex</div></div>
+    <div class="stat reveal d1"><div class="num"><span data-count="100">0</span>%</div><div class="label">Prime Frontage</div></div>
+    <div class="stat reveal d2"><div class="num"><span data-count="3">0</span>-in-1</div><div class="label">Retail • Office • Leisure</div></div>
+    <div class="stat reveal d3"><div class="num">24×<span data-count="7">0</span></div><div class="label">Footfall Destination</div></div>
+  </div></div></section>
+  <section class="section"><div class="container">
+    <div class="center reveal" style="margin-bottom:40px;"><span class="eyebrow">The Details</span><h2 class="section-title">Project at a Glance</h2><div class="gold-line"></div></div>
+    <div class="form-card reveal"><div class="specs">
+      <div class="spec-row"><span>Project Name</span><span>M3M Jewelcrest Avenue</span></div>
+      <div class="spec-row"><span>Location</span><span>Sector 97, Noida (Noida Expressway)</span></div>
+      <div class="spec-row"><span>Type</span><span>Commercial — High-Street Retail</span></div>
+      <div class="spec-row"><span>Config</span><span>Retail + Family Entertainment Zone</span></div>
+      <div class="spec-row"><span>Price*</span><span>₹35,000 – ₹39,000 / sq.ft.*</span></div>
+      <div class="spec-row"><span>RERA</span><span>UPRERAPRJ690055/10/2025</span></div>
+    </div><p class="form-note">Details indicative, compiled from public sources. Verify with the developer / RERA.</p></div>
+  </div></section>
+  <section class="section" style="background:var(--charcoal);"><div class="container">
+    <div class="center reveal" style="margin-bottom:50px;"><span class="eyebrow">Investment Highlights</span><h2 class="section-title">Why Jewelcrest Avenue</h2><div class="gold-line"></div></div>
+    <div class="amen-grid">
+      <div class="amen reveal"><div class="ico">📈</div><h4>High Footfall</h4><p>Retail + offices + leisure drive daily traffic.</p></div>
+      <div class="amen reveal d1"><div class="ico">🏬</div><h4>Anchor Brands</h4><p>Space designed to attract marquee tenants.</p></div>
+      <div class="amen reveal d2"><div class="ico">🎬</div><h4>Multiplex Draw</h4><p>Entertainment as a footfall magnet.</p></div>
+      <div class="amen reveal d3"><div class="ico">🍴</div><h4>F&amp;B Streets</h4><p>Dining &amp; food court on upper levels.</p></div>
+      <div class="amen reveal"><div class="ico">💼</div><h4>Boutique Offices</h4><p>Flexible business suites for enterprises.</p></div>
+      <div class="amen reveal d1"><div class="ico">🅿️</div><h4>Ample Parking</h4><p>Multi-level parking for visitors &amp; staff.</p></div>
+      <div class="amen reveal d2"><div class="ico">🧘</div><h4>Wellness Zones</h4><p>Lifestyle &amp; wellness experiences on site.</p></div>
+      <div class="amen reveal d3"><div class="ico">🌐</div><h4>Prime Connectivity</h4><p>On a well-linked commercial corridor.</p></div>
+    </div>
+  </div></section>
+  <section class="section"><div class="container">
+    <div class="center reveal" style="margin-bottom:40px;"><span class="eyebrow">Location Advantage</span><h2 class="section-title">A Prime Commercial Address</h2><div class="gold-line"></div></div>
+    <div class="split" style="align-items:stretch;">
+      <div class="reveal"><ul class="feature-list" style="margin-top:0;"><li>High-visibility, high-footfall corridor</li><li>Surrounded by a dense residential catchment</li><li>Excellent road connectivity &amp; access</li><li>Close to business hubs &amp; premium neighbourhoods</li><li>Strong potential for rental yield &amp; appreciation</li></ul><a class="btn btn-gold" style="margin-top:24px;" data-open-modal>Request Location Map</a></div>
+      <div class="map-wrap reveal d2"><iframe class="map-frame" style="height:100%;min-height:340px;" src="https://www.google.com/maps?q=Sector+97+Noida+Noida+Expressway&output=embed" loading="lazy" title="M3M Jewelcrest Avenue location"></iframe></div>
+    </div>
+  </div></section>
+  <section class="section" style="background:var(--charcoal);"><div class="container">
+    <div class="center reveal" style="margin-bottom:44px;"><span class="eyebrow">Gallery</span><h2 class="section-title">Inside the Destination</h2><div class="gold-line"></div></div>
+    <div class="gallery-grid gallery-2 reveal"><div class="g-item"><img src="asset/jewelcrest-front.webp" alt="Grand Frontage" onerror="this.remove()" /><span class="g-fallback ph-c"></span><span class="g-cap">Grand Frontage</span></div><div class="g-item"><img src="asset/jewelcrest-hero.webp" alt="Night Façade" onerror="this.remove()" /><span class="g-fallback ph-b"></span><span class="g-cap">Night Façade</span></div><div class="g-item"><img src="asset/jewelcrest-retail-1.webp" alt="High-Street Retail" onerror="this.remove()" /><span class="g-fallback ph-a"></span><span class="g-cap">High-Street Retail</span></div><div class="g-item"><img src="asset/jewelcrest-retail-2.jpg" alt="Retail Promenade" onerror="this.remove()" /><span class="g-fallback ph-d"></span><span class="g-cap">Retail Promenade</span></div></div>
+  </div></section>
+  <section class="section"><div class="container reveal"><div class="cta-band">
+    <h2>Invest in a Landmark Destination</h2><p>Enquire now for the latest floor plans, price list, leasing options and a guided site visit.</p>
+    <div class="hero-actions" style="justify-content:center;"><a class="btn" style="background:#06223f;color:#fff;" data-open-modal>Enquire Now</a><a class="btn btn-ghost fab-wa">WhatsApp Us</a></div>
+  </div></div></section>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div class="page" id="page-contact">
+  <header class="page-hero"><div class="hero-bg"></div><div class="hero-orb o1"></div>
+    <div class="container"><span class="eyebrow reveal">Get in Touch</span><h1 class="reveal d1">Enquire &amp; <span class="text-gold">Book a Site Visit</span></h1><p class="lead reveal d2" style="margin-top:16px;">Tell us what you're looking for. Our team will share brochures, pricing and site-visit slots — and connect with you instantly on WhatsApp.</p><div class="breadcrumb reveal d3"><span data-nav="home">Home</span> / Contact</div></div>
+  </header>
+  <section class="section" style="padding-top:40px;"><div class="container split" style="align-items:flex-start;">
+    <div class="reveal"><span class="eyebrow">Contact Details</span><h2 class="section-title">Talk to Our Team</h2><div class="gold-line"></div>
+      <div class="contact-info">
+        <div class="ci-item"><div class="ci-ico">📞</div><div><h4>Call Us</h4><p><a href="tel:+919711537566">+91 97115 37566</a><br><a href="tel:+919654694700">+91 96546 94700</a></p></div></div>
+        <div class="ci-item"><div class="ci-ico">✉️</div><div><h4>Email</h4><p><a href="mailto:dhingrasachin1985@gmail.com">dhingrasachin1985@gmail.com</a></p></div></div>
+        <div class="ci-item"><div class="ci-ico">🟢</div><div><h4>WhatsApp</h4><p><a class="fab-wa">Chat with us on WhatsApp →</a></p></div></div>
+        <div class="ci-item"><div class="ci-ico">📍</div><div><h4>Site Visits</h4><p>M3M Trump Tower — Sector 94, Noida<br>M3M Jewelcrest Avenue — Prime NCR Corridor</p></div></div>
+        <div class="ci-item"><div class="ci-ico">🕑</div><div><h4>Hours</h4><p>Mon – Sun, 9:30 AM – 7:30 PM IST</p></div></div>
+      </div>
+    </div>
+    <div class="reveal d2"><div class="form-card">
+      <h3 style="margin-bottom:4px;">Send an Enquiry</h3><p style="font-size:.88rem;color:var(--grey);margin-bottom:22px;">Fields marked * are required.</p>
+      <form data-enquiry data-project="General Enquiry">
+        <div class="form-row"><div class="field"><label>Full Name*</label><input type="text" name="name" placeholder="Your name" required /></div><div class="field"><label>Phone*</label><input type="tel" name="phone" placeholder="Mobile number" required /></div></div>
+        <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" /></div>
+        <div class="form-row"><div class="field"><label>Project of Interest</label><select name="project"><option>General Enquiry</option><option>M3M Trump Tower, Noida</option><option>M3M Jewelcrest Avenue</option></select></div><div class="field"><label>Preferred Site Visit</label><input type="date" name="visit" /></div></div>
+        <div class="field"><label>Message</label><textarea name="message" placeholder="Tell us your budget, configuration or any questions…"></textarea></div>
+        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Send &amp; Chat on WhatsApp</button>
+        <p class="form-note">On submit you'll be redirected to WhatsApp with your details pre-filled, and an email draft will open.</p>
+      </form>
+    </div></div>
+  </div></section>
+  <section class="section" style="padding-top:0;"><div class="container reveal">
+    <div class="center" style="margin-bottom:30px;"><span class="eyebrow">Find Us</span><h2 class="section-title">Location</h2><div class="gold-line" style="margin-inline:auto;"></div></div>
+    <div class="map-wrap"><iframe class="map-frame" src="https://www.google.com/maps?q=Sector+94+Noida&output=embed" loading="lazy" title="Location map"></iframe></div>
+  </div></section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer"><div class="container footer-grid">
+  <div><div class="logo" data-nav="home"><img class="logo-img" src="asset/logo.png" alt="m3mrealestates.com — Find, Invest, Grow" /></div><p class="about">Redefining luxury living and commercial excellence across Delhi NCR. Find • Invest • Grow.</p></div>
+  <div><h4>Explore</h4><ul><li><a data-nav="home">Home</a></li><li><a data-nav="about">About</a></li><li><a data-nav="contact">Contact</a></li></ul></div>
+  <div><h4>Projects</h4><ul><li><a data-nav="trump">M3M Trump Tower</a></li><li><a data-nav="jewel">M3M Jewelcrest Avenue</a></li></ul></div>
+  <div><h4>Get in Touch</h4><ul><li><a href="tel:+919711537566">+91 97115 37566</a></li><li><a href="tel:+919654694700">+91 96546 94700</a></li><li><a href="mailto:dhingrasachin1985@gmail.com">dhingrasachin1985@gmail.com</a></li></ul><div class="social"><a href="https://www.instagram.com/apnaa_home/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.17-.4-.37-1-.42-2.2C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5.01-4.75.07-.9.04-1.4.2-1.7.32-.43.17-.74.37-1.06.7-.32.32-.52.63-.7 1.06-.12.3-.28.8-.32 1.7-.06 1.25-.07 1.6-.07 4.75s.01 3.5.07 4.75c.04.9.2 1.4.32 1.7.17.43.37.74.7 1.06.32.32.63.52 1.06.7.3.12.8.28 1.7.32 1.25.06 1.6.07 4.75.07s3.5-.01 4.75-.07c.9-.04 1.4-.2 1.7-.32.43-.17.74-.37 1.06-.7.32-.32.52-.63.7-1.06.12-.3.28-.8.32-1.7.06-1.25.07-1.6.07-4.75s-.01-3.5-.07-4.75c-.04-.9-.2-1.4-.32-1.7a2.85 2.85 0 0 0-.7-1.06 2.85 2.85 0 0 0-1.06-.7c-.3-.12-.8-.28-1.7-.32C15.5 4.01 15.15 4 12 4zm0 3.06A4.94 4.94 0 1 1 12 17a4.94 4.94 0 0 1 0-9.88zm0 8.14A3.2 3.2 0 1 0 12 8.8a3.2 3.2 0 0 0 0 6.4zm6.3-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg></a><a href="https://www.youtube.com/@Apnaa_home" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 3.9 12 3.9 12 3.9s-7.5 0-9.4.5A3 3 0 0 0 .5 6.5 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.5 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a></div></div>
+<div class="container" style="text-align:center;padding-top:22px;margin-top:26px;border-top:1px solid rgba(255,255,255,.07);color:var(--grey);font-size:.82rem;">© 2026 Apnaa Home. All rights reserved.</div></footer>
+<div class="disclaimer"><div class="container"><p>Disclaimer: This is an independent concept. Website created for Information purpose and is not the official M3M website. Project names, figures and details are indicative and must be independently verified. All trademarks belong to their respective owners.</p></div></div>
+
+<div class="float-enquire"><a class="fab fab-wa fab-pulse" aria-label="WhatsApp">🟢</a><a class="fab fab-enquire" data-open-modal>Enquire</a></div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="enquiryModal"><div class="modal">
+  <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+  <span class="eyebrow" id="modalEyebrow">Enquire Now</span>
+  <h3>Enquire Now</h3><p class="sub">Share your details and we'll respond instantly on WhatsApp with the price list, floor plans &amp; site-visit slots.</p>
+  <form data-enquiry id="modalForm" data-project="General Enquiry">
+    <div class="field"><label>Full Name*</label><input type="text" name="name" placeholder="Your name" required /></div>
+    <div class="field"><label>Phone*</label><input type="tel" name="phone" placeholder="Mobile number" required /></div>
+    <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" /></div>
+    <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Send &amp; Chat on WhatsApp</button>
+  </form>
+  <p class="form-note">By submitting, you'll be redirected to WhatsApp and an email draft will open.</p>
+</div></div>
+
+<script>
+var CONFIG={whatsappPrimary:'919711537566',whatsappAlt:'919654694700',email:'dhingrasachin1985@gmail.com',formEndpoint:''};
+var PAGE_META={
+  home:{project:'General Enquiry',label:'M3M Real Estates'},
+  about:{project:'General Enquiry',label:'M3M Real Estates'},
+  trump:{project:'M3M Trump Tower, Noida',label:'M3M Trump Tower • Sector 94, Noida'},
+  jewel:{project:'M3M Jewelcrest Avenue',label:'M3M Jewelcrest Avenue'},
+  contact:{project:'General Enquiry',label:'M3M Real Estates'}
+};
+var currentPage='home';
+
+document.addEventListener('DOMContentLoaded',function(){
+  initNav();wireNav();wireModal();wireForms();wireFloating();wireLightbox();
+  showPage(location.hash?location.hash.replace('#',''):'home',true);
+});
+
+function initNav(){
+  var nav=document.querySelector('.nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>40);}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  var burger=document.querySelector('.hamburger'),links=document.querySelector('.nav-links');
+  burger.addEventListener('click',function(){burger.classList.toggle('open');links.classList.toggle('open');});
+}
+function wireNav(){
+  document.querySelectorAll('[data-nav]').forEach(function(el){
+    el.addEventListener('click',function(e){e.preventDefault();showPage(el.getAttribute('data-nav'));});
+  });
+}
+function showPage(name,skipScroll){
+  if(!PAGE_META[name])name='home';
+  currentPage=name;
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  var page=document.getElementById('page-'+name);page.classList.add('active');
+  document.querySelectorAll('.nav-links a[data-nav]').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-nav')===name);});
+  var burger=document.querySelector('.hamburger'),links=document.querySelector('.nav-links');
+  burger.classList.remove('open');links.classList.remove('open');
+  try{history.replaceState(null,'','#'+name);}catch(e){}
+  if(!skipScroll)window.scrollTo(0,0);
+  revealIn(page);animateCounters(page);
+  if(name==='trump'||name==='jewel'){
+    var key='m3m_pop_'+name;
+    try{if(!sessionStorage.getItem(key)){setTimeout(function(){openModal(name);sessionStorage.setItem(key,'1');},1300);}}catch(e){setTimeout(function(){openModal(name);},1300);}
+  }
+}
+function revealIn(scope){
+  var els=scope.querySelectorAll('.reveal');
+  els.forEach(function(e){e.classList.remove('show');});
+  requestAnimationFrame(function(){requestAnimationFrame(function(){els.forEach(function(e){e.classList.add('show');});});});
+}
+function animateCounters(scope){
+  scope.querySelectorAll('[data-count]').forEach(function(el){
+    var target=parseFloat(el.dataset.count),suffix=el.dataset.suffix||'',dur=1500,start=performance.now();
+    function step(now){var p=Math.min((now-start)/dur,1),eased=1-Math.pow(1-p,3),val=target*eased;
+      el.textContent=(Number.isInteger(target)?Math.round(val):val.toFixed(1))+suffix;if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  });
+}
+function openModal(name){
+  var meta=PAGE_META[name]||PAGE_META[currentPage];
+  document.getElementById('modalEyebrow').textContent=meta.label;
+  document.getElementById('modalForm').setAttribute('data-project',meta.project);
+  var m=document.getElementById('enquiryModal');m.classList.add('open');document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('enquiryModal').classList.remove('open');document.body.style.overflow='';}
+function wireModal(){
+  document.addEventListener('click',function(e){
+    if(e.target.closest('[data-open-modal]')){e.preventDefault();openModal(currentPage);}
+    if(e.target.matches('.modal-overlay')||e.target.closest('[data-close-modal]'))closeModal();
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+}
+function wireForms(){
+  document.querySelectorAll('form[data-enquiry]').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var data={};new FormData(form).forEach(function(v,k){data[k]=v;});
+      var name=(data.name||'').trim(),phone=(data.phone||'').trim();
+      if(!name||!phone){showToast('Please enter your name and phone number.');return;}
+      var project=data.project||form.getAttribute('data-project')||'General Enquiry';
+      var lines=['New Enquiry — '+project,'Name: '+name,'Phone: '+phone];
+      if(data.email)lines.push('Email: '+data.email);
+      if(data.visit)lines.push('Preferred site visit: '+data.visit);
+      if(data.message)lines.push('Message: '+data.message);
+      var text=lines.join('\n');
+      if(CONFIG.formEndpoint){try{fetch(CONFIG.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.assign({project:project},data))}).catch(function(){});}catch(e){}}
+      window.open('mailto:'+CONFIG.email+'?subject='+encodeURIComponent('Enquiry: '+project+' — '+name)+'&body='+encodeURIComponent(text),'_blank');
+      showToast('Redirecting you to WhatsApp…');
+      setTimeout(function(){window.location.href='https://wa.me/'+CONFIG.whatsappPrimary+'?text='+encodeURIComponent(text);},900);
+      form.reset();closeModal();
+    });
+  });
+}
+function wireFloating(){
+  document.querySelectorAll('.fab-wa').forEach(function(wa){
+    wa.style.cursor='pointer';
+    wa.addEventListener('click',function(){window.open('https://wa.me/'+CONFIG.whatsappPrimary+'?text='+encodeURIComponent('Hi M3M, I would like more information.'),'_blank');});
+  });
+}
+function wireLightbox(){
+  var lb=document.createElement('div');lb.className='lightbox';
+  lb.innerHTML='<button class="lb-close" aria-label="Close">&times;</button><button class="lb-btn lb-prev">&#8249;</button><div class="lb-stage"><div class="lb-slot"></div><div class="lb-cap"></div></div><button class="lb-btn lb-next">&#8250;</button>';
+  document.body.appendChild(lb);
+  var slot=lb.querySelector('.lb-slot'),cap=lb.querySelector('.lb-cap'),items=[],idx=0;
+  function render(){var el=items[idx],img=el.querySelector('img'),label=(el.querySelector('.g-cap')||{}).textContent||'';var fb=el.querySelector('.g-fallback');var ph=fb?(fb.className.replace('g-fallback','').trim()||'ph-a'):'ph-a';
+    if(img&&img.getAttribute('src'))slot.innerHTML='<img src="'+img.getAttribute('src')+'" alt="'+label+'">';else slot.innerHTML='<div class="lb-fallback '+ph+'">'+(label||'Image')+'</div>';cap.textContent=label;}
+  function open(i){idx=i;render();lb.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';}
+  document.addEventListener('click',function(e){var gi=e.target.closest('.g-item');if(gi){items=Array.prototype.slice.call(gi.parentNode.querySelectorAll('.g-item'));open(items.indexOf(gi));}});
+  lb.querySelector('.lb-close').addEventListener('click',close);
+  lb.querySelector('.lb-next').addEventListener('click',function(){idx=(idx+1)%items.length;render();});
+  lb.querySelector('.lb-prev').addEventListener('click',function(){idx=(idx-1+items.length)%items.length;render();});
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight'){idx=(idx+1)%items.length;render();}if(e.key==='ArrowLeft'){idx=(idx-1+items.length)%items.length;render();}});
+}
+var toastTimer;
+function showToast(msg){var t=document.querySelector('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t);}t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove('show');},3000);}
+</script>
+</body>
+</html>
